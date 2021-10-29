@@ -1,0 +1,27 @@
+{
+  "name": "Projeto_filmes_back-end",
+  "version": "1.0.0",
+  "description": "Repositório para primeiro projeto do modulo 03 - Full Stack da Bleu EdTech.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodrigodesigner94/Projeto_APIs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rodrigodesigner94/Projeto_APIs/issues"
+  },
+  "homepage": "https://github.com/rodrigodesigner94/Projeto_APIs#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
+}
