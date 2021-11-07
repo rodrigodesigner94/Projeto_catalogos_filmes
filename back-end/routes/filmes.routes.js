@@ -4,7 +4,7 @@ const router = express.Router();
 
 const filmes = [
     {id: Math.random(),
-        imagem:"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.papodecinema.com.br%2Ffilmes%2Fo-iluminado%2F&psig=AOvVaw06ymZDTDqayV2flpWJpuTc&ust=1635550275101000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCOC6s_Wh7vMCFQAAAAAdAAAAABAD",
+        imagem:"https://musicimage.xboxlive.com/catalog/video.movie.8D6KGWZL58P8/image?locale=pt-br&purposes=BoxArt&mode=scale&q=90&w=162",
         nome: "O iluminado",
         genero:"Terror",
         ano: "1980",
@@ -14,7 +14,7 @@ const filmes = [
     },
     
     {id: Math.random(),
-        imagem:"https://www.google.com/url?sa=i&url=https%3A%2F%2Ffilmow.com%2Finterestelar-t27814%2F&psig=AOvVaw2s1JNJRDnpPTWX_G7qSIbc&ust=1635550412396000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCPibs72i7vMCFQAAAAAdAAAAABAE",
+        imagem:"https://media.fstatic.com/A4eWDHBdYWan2NJGIIBIH1yAMYw=/290x478/smart/media/movies/covers/2015/02/interestelar_t27814.jpg",
         nome: "Interestelar",
         genero:"Ficção cientifica",
         ano: "2014",
@@ -24,7 +24,7 @@ const filmes = [
     },
     
     {id: Math.random(),
-        imagem:"https://www.google.com/url?sa=i&url=https%3A%2F%2Fpt.wikipedia.org%2Fwiki%2FKill_Bill&psig=AOvVaw3nxwj9KJHke593WlH0QcB3&ust=1635550520064000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCNDD89Oi7vMCFQAAAAAdAAAAABAN",
+        imagem:"https://upload.wikimedia.org/wikipedia/pt/6/6d/Kill_Bill_poster.jpg",
         nome: "Kill Bil",
         genero:"Ação",
         ano: "2003",
