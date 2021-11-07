@@ -3,36 +3,38 @@ const express = require('express');
 const router = express.Router();
 
 const filmes = [
-    {id: Date.now(),
-        nome: "O iluminado",
+    {id: Math.random(),
         imagem:"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.papodecinema.com.br%2Ffilmes%2Fo-iluminado%2F&psig=AOvVaw06ymZDTDqayV2flpWJpuTc&ust=1635550275101000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCOC6s_Wh7vMCFQAAAAAdAAAAABAD",
+        nome: "O iluminado",
         genero:"Terror",
         ano: "1980",
         diretor: "Stanley Kubrick",
-        nota:"",
+        nota:"8",
         assistido: "sim"
     },
     
-    {id: Date.now(),
-        nome: "Interestelar",
+    {id: Math.random(),
         imagem:"https://www.google.com/url?sa=i&url=https%3A%2F%2Ffilmow.com%2Finterestelar-t27814%2F&psig=AOvVaw2s1JNJRDnpPTWX_G7qSIbc&ust=1635550412396000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCPibs72i7vMCFQAAAAAdAAAAABAE",
+        nome: "Interestelar",
         genero:"Ficção cientifica",
         ano: "2014",
         diretor: "Christopher Nolan",
+        nota:"10",
         assistido: "sim"
     },
     
-    {id: Date.now(),
-        nome: "Kill Bil",
+    {id: Math.random(),
         imagem:"https://www.google.com/url?sa=i&url=https%3A%2F%2Fpt.wikipedia.org%2Fwiki%2FKill_Bill&psig=AOvVaw3nxwj9KJHke593WlH0QcB3&ust=1635550520064000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCNDD89Oi7vMCFQAAAAAdAAAAABAN",
+        nome: "Kill Bil",
         genero:"Ação",
         ano: "2003",
         diretor: "Quentin Tarantino",
+        nota:"10",
         assistido: "sim"
     },
 ]
 
-// [GET] /filmes - Retornar uma lista de filmes
+// [GET] /filmes - Retorna uma lista de filmes
 router.get('/', (req, res) => {
     res.send(filmes);
 })
@@ -46,9 +48,9 @@ router.get('/:id', (req, res) => {
 
 // [POST] /filmes/add - Cadastro de um novo filme
 router.post('/add', (req, res) => {
-    // recebi o objeto da vaga para cadastar vinda do cliente (via requisicao http POST)
+    // recebi o objeto do filme para cadastar vinda do cliente (via requisicao http POST)
     const filme = req.body;
-    filme.id = Date.now();
+    filme.id = Math.random();
     filmes.push(filme);
     res.status(201).send({
         message: 'Filme cadastrado com sucesso',
@@ -73,7 +75,7 @@ router.put('/edit/:id', (req, res) => {
     }
 
     res.send({
-        message: `Filme ${filmes[index].titulo} atualizado com sucesso`,
+        message: `Filme ${filmes[index].nome} atualizado com sucesso`,
         data: filmes[index]
     })
 })
@@ -88,7 +90,7 @@ router.delete('/delete/:id', (req, res) => {
     const nome = filmes[index];
     filmes.splice(index, 1);
     res.send({
-        message: `Filme ${nome.titulo} excluido com sucesso !`,
+        message: `Filme ${nome.nome} excluido com sucesso !`,
     })
 })
 
